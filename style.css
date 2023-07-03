@@ -30,8 +30,7 @@ body{
     margin:5em auto;
     justify-content: center;
     align-items: center;
-    width:20vw;
-    width:20vw;
+    width:19vw;
     height: auto;
     background-color: var(--card-background-color);
     border-radius: 1em;
@@ -42,19 +41,49 @@ body{
 }
 
 figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width:85%;
     height: 45%;
     margin-top: 1em;
     margin-right:auto;
     margin-left: auto;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
+
+figure {
+    position: relative;
+}
+  
+figure .icon-img {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+  
+figure:hover .icon-img {
+   opacity: 1;
+}
+  
 
 .card-img{
     width:100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0.5em;
+}
+
+.card-img:hover{
+    opacity: 0.4;
+}
+
+
+figure:hover{
+    cursor: pointer;
+    background: var(--eth-price-color);
 }
 
 .title{
@@ -65,10 +94,15 @@ figure{
     padding-top:0.8em;
 }
 
+.title:hover{
+    color: var(--eth-price-color);
+    cursor: pointer;
+}
+
 .description{
     font-size: 18px;
     font-family: var(--font-style);
-    padding-left: 1.2em;
+    padding-left: 1.4em;
     padding-top:1em;
     color: var(--text-color);
     font-weight:500;
@@ -76,7 +110,7 @@ figure{
 
 .billboard{
     display: flex;
-    padding-left: 1.2em;
+    padding-left: 1.4em;
     padding-top: 1.3em;
     margin-bottom: 1.2em;
 }
@@ -128,6 +162,11 @@ hr{
     color: var(--text-num-color);
 }
 
+.prof-name:hover{
+    color: var(--eth-price-color);
+    cursor: pointer;
+}
+
 .prof-name-creation{
     color: var(--text-color);
 }
@@ -168,7 +207,7 @@ hr{
         margin-top: 2em;
         justify-content: center;
         align-items: center;
-        width:92vw;
+        width:90vw;
         height: auto;
     }
     hr{
@@ -177,6 +216,10 @@ hr{
         height: 1px !important;
         background-color: var(--text-color) !important;
         margin: 0em auto;
+    }
+
+    .eth-price{
+        padding-right: 6em;
     }
     
 
@@ -196,6 +239,9 @@ hr{
     .description{
         padding-right: 2em;
     }
+    .eth-price{
+        padding-right: 6em;
+    }
 
     .made-by{
         margin-bottom: 1em;
@@ -214,6 +260,9 @@ hr{
     .made-by{
         margin-bottom: 1em;
     }
+    .eth-price{
+        padding-right: 6em;
+    }
 
 }
 
@@ -227,6 +276,9 @@ hr{
 
     .made-by{
         margin-bottom: 1em;
+    }
+    .eth-price{
+        padding-right: 6em;
     }
 
 }
@@ -264,6 +316,9 @@ hr{
     .made-by{
         margin-bottom: 1em;
     }
+    .eth-price{
+        padding-right: 5em;
+    }
 
 }
 
@@ -282,24 +337,50 @@ hr{
     .made-by{
         margin-bottom: 1em;
     }
+    .eth-price{
+        padding-right: 6em;
+    }
 
 }
 
-@media (min-width:1440px){
+@media (min-width:1440px) and (max-width:2000px){
     .card-component{
         margin-top: 2em;
         justify-content: center;
         align-items: center;
-        width:21vw;
+        width:22vw;
         height: auto;
     }
 
     .description{
         padding-right: 2em;
+        font-size: 1.125em;
     }
     .eth-price{
-        
-        padding-right: 5.5em;
+        padding-right: 7em;
+    }
+
+    .made-by{
+        margin-bottom: 1em;
+    }
+
+}
+
+@media (min-width:2000px) and (max-width:2140px){
+    .card-component{
+        margin-top: 2em;
+        justify-content: center;
+        align-items: center;
+        width:19.5vw;
+        height: auto;
+    }
+
+    .description{
+        padding-right: 2em;
+        font-size: 0.97em;
+    }
+    .eth-price{
+        padding-right: 4em;
     }
 
     .made-by{
